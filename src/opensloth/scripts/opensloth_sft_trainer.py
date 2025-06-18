@@ -238,6 +238,8 @@ def run_mp_training(
                     for p in processes:
                         p.terminate()
                     if i == 0:
+                        import traceback
+                        traceback.print_exc()
                         raise Exception("Error in training")
                 else:
                     processes.remove(proc)
